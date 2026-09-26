@@ -101,7 +101,7 @@ def setup_venv(venv_pip):
         shell=PLATFORM == "linux",
     )
     subprocess.check_call(
-        f"{venv_pip} install -U {' '.join(torch_deps)} --index-url https://download.pytorch.org/whl/cu124",
+        f"{venv_pip} install -U {' '.join(torch_deps)} --extra-index-url https://download.pytorch.org/whl/cu124",
         shell=PLATFORM == "linux",
     )
     if PLATFORM == "windows":
